@@ -1,0 +1,782 @@
+Process Process-1:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/process.py", line 254, in _bootstrap
+    self.run()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/xiaoweibin/Library/Mobile Documents/com~apple~CloudDocs/python/emlFileProcess/timelinebar.py", line 65, in run
+    self.update(result_queue.get())
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/queues.py", line 94, in get
+    res = self._recv_bytes()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Process Process-2:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/process.py", line 254, in _bootstrap
+    self.run()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/xiaoweibin/Library/Mobile Documents/com~apple~CloudDocs/python/emlFileProcess/simplesqlite.py", line 42, in run
+    mime = task_queue.get(timeout=10)
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/queues.py", line 104, in get
+    if timeout < 0 or not self._poll(timeout):
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/connection.py", line 414, in _poll
+    r = wait([self], timeout)
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/connection.py", line 911, in wait
+    ready = selector.select(timeout)
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/selectors.py", line 367, in select
+    fd_event_list = self._poll.poll(timeout)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "getFromToeml_multiPool.py", line 101, in <module>
+    test.process()
+  File "getFromToeml_multiPool.py", line 86, in process
+    p.join()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/pool.py", line 510, in join
+    self._worker_handler.join()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/threading.py", line 1054, in join
+    self._wait_for_tstate_lock()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/threading.py", line 1070, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/util.py", line 253, in _run_finalizers
+    finalizer()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/util.py", line 185, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/pool.py", line 569, in _terminate_pool
+    p.join()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/process.py", line 121, in join
+    res = self._popen.wait(timeout)
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/popen_fork.py", line 51, in wait
+    return self.poll(os.WNOHANG if timeout == 0.0 else 0)
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/popen_fork.py", line 29, in poll
+    pid, sts = os.waitpid(self.pid, flag)
+KeyboardInterrupt
+11941_05E01258E71AC046852ED29DFCD139D54DF2C042@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18800_5C041D9C6CCC7845AE90EEADDBDC8D016F035078@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+10045_05E01258E71AC046852ED29DFCD139D54DEED6BB@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+08783_05E01258E71AC046852ED29DFCD139D54DF2E679@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16949_A53A516D7A8B644592D970450A35002174900412@dncdag2.dnc.org.eml'NoneType' object has no attribute 'group'
+22405_8A3BA5C3DED8F34DBD96D72CD1C4AA38A996B3B1@dncdag2.dnc.org.eml'NoneType' object has no attribute 'group'
+21531_8A3BA5C3DED8F34DBD96D72CD1C4AA38A996387E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00450_85d95825-218e-4144-a7d9-113914ea354a@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17431_A53A516D7A8B644592D970450A35002120D39864@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+10838_05E01258E71AC046852ED29DFCD139D54DEFFA21@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16811_FA3F1BD25675E94DBCF666C39F02836CFE2CDF57@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16311_c3a520d4-6f39-4ed4-87eb-09650ee9be89@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+02810_c50124b0-ad7c-4359-bac1-a9b87c6ec1b6@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+22254_8A3BA5C3DED8F34DBD96D72CD1C4AA38879B0DC0@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17181_A53A516D7A8B644592D970450A35002174A0E5CC@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01330_56957c0e-4fc3-4c24-ad53-c6a1180be202@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+10486_05E01258E71AC046852ED29DFCD139D54DF12E73@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20992_ec62e8c6-4f2c-48d9-9421-9b5d667c8f34@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+02652_4f9053da-7274-4eee-9a6c-2bd031348529@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+22177_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995F1A1@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17426_A53A516D7A8B644592D970450A35002174A63AC0@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+06394_05E01258E71AC046852ED29DFCD139D54DF23ED8@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17474_A53A516D7A8B644592D970450A350021063DCDAB@DNCDAG3.dnc.org.eml'NoneType' object has no attribute 'group'
+18986_5C041D9C6CCC7845AE90EEADDBDC8D016F04597F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17589_A53A516D7A8B644592D970450A35002127A7BA75@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00610_2689af28-24aa-4ab1-be5b-78b3e2268f47@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+22078_8A3BA5C3DED8F34DBD96D72CD1C4AA38A99605FB@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17337_00f5dd0c-2a10-494a-8066-1973f10be77e@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17268_A53A516D7A8B644592D970450A35002174A5CAD6@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17470_A53A516D7A8B644592D970450A35002127A301DF@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+04804_05E01258E71AC046852ED29DFCD139D54DF0CBA0@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+11807_e0604ab9-c9ba-4b66-b6cb-42af10fcd2ef@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+08561_05E01258E71AC046852ED29DFCD139D54DEF72FB@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21691_8A3BA5C3DED8F34DBD96D72CD1C4AA38879B0040@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+03024_be76a0dc-0dfd-4e78-b9ee-bd282d091811@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+11047_7b989523-a6b8-4eca-8958-90b1da399809@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21674_a9dc0240-8514-42f3-8b1d-6f5edde7602b@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17216_c6147aa4-e114-4e74-afee-5374709cbecb@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+08805_05E01258E71AC046852ED29DFCD139D54DF1345F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17142_A53A516D7A8B644592D970450A35002174A6B48A@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+09954_05E01258E71AC046852ED29DFCD139D54DF23335@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+07323_05E01258E71AC046852ED29DFCD139D54DF2D66E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01980_db7f282c-bc9b-4d8c-9a51-ace8a353a3c5@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+00969_8433d7b8-0e6d-472c-8fc2-d84703943b5d@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21402_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995809E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18808_5C041D9C6CCC7845AE90EEADDBDC8D016EF5B91F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16437_010a4689-77f4-4cd5-9a94-4ea63a646135@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16873_A53A516D7A8B644592D970450A35002120D397B0@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17224_A53A516D7A8B644592D970450A35002174A1AEE2@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+02065_05e56031-aa43-48c7-81b0-7fb163bbfb24@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+01243_9aa311c1-ce23-45f6-8289-5d2a21f2696c@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+20971_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995DC63@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+05188_05E01258E71AC046852ED29DFCD139D54DF13412@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+19737_ce1f56cc-0a72-445b-af12-8b550b4cf720@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21027_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995F150@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+04364_05E01258E71AC046852ED29DFCD139D54DEF3C35@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20836_60843498-7950-424b-bafa-bdfd11a26d88@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16881_A53A516D7A8B644592D970450A35002127A7B9BD@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17253_A53A516D7A8B644592D970450A35002127A87CA1@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+04725_05E01258E71AC046852ED29DFCD139D54DF1F2A7@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+09139_0765e015-9791-4322-b3c4-a13fbfbf81cb@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+04856_05E01258E71AC046852ED29DFCD139D54DF323FD@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21725_3040959a-2083-442b-850b-7c9b4a49a051@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+14147_05E01258E71AC046852ED29DFCD139D54DEF8908@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+19607_5C041D9C6CCC7845AE90EEADDBDC8D016EF3E07E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+05985_05E01258E71AC046852ED29DFCD139D54DF070F8@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+03748_050d368b-b77a-4b6e-bd15-b578893c9d12@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+03029_66419c85-45b7-479f-b445-866b7e3eaf41@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+03574_2a60df2b-823d-4025-aefa-9e3623727fca@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21535_b1f2cd8a-d5c3-4f04-83b2-cd1d74978a3b@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21563_5d00ccb0-dd92-477d-95bb-5baadbb0053e@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16823_FA3F1BD25675E94DBCF666C39F02836CFE2CE0E8@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21581_cafafecf-97da-486f-81a9-95fa1ff172cc@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+20625_5C041D9C6CCC7845AE90EEADDBDC8D016F039236@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21192_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995DAC1@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21547_8A3BA5C3DED8F34DBD96D72CD1C4AA38A99087BB@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18184_5C041D9C6CCC7845AE90EEADDBDC8D01220527E8@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20993_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995C17E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+03401_1132d9d5-1a15-43cc-ab68-b6d83e95cd18@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+19309_5C041D9C6CCC7845AE90EEADDBDC8D016F02EC94@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18389_5C041D9C6CCC7845AE90EEADDBDC8D016EF7A97C@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01107_3c945078-0e94-4990-b4a7-fd57c376e54f@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16171_0b71e0f4-60c0-405e-99e7-330dbfb3a1d9@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21209_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9963137@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18257_47dd49be-986c-433f-a7ed-dbe5fdfaf372@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+02537_49392ebc-8884-4132-ad0e-95b28198695b@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+10824_05E01258E71AC046852ED29DFCD139D54DEEEA48@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17331_A53A516D7A8B644592D970450A350021063BEC7D@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16663_f82bbf48-eac6-4f4e-9852-8747c881efb1@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+19251_5C041D9C6CCC7845AE90EEADDBDC8D016EFD2D7E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21015_8A3BA5C3DED8F34DBD96D72CD1C4AA38879AC8D9@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+22347_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9919692@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01598_e5089bec-c91c-49ef-928b-d92316f41e2f@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17225_29500893-1f60-40c1-a108-7426cd009df6@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21300_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9060BDF@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00273_E93A195FF3E79F4784C9236DDD2BEC90295A139F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+12839_05E01258E71AC046852ED29DFCD139D54DEFA184@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18577_5C041D9C6CCC7845AE90EEADDBDC8D016F06731B@dncdag2.dnc.org.eml'NoneType' object has no attribute 'group'
+16497_faab76e0-9050-4c86-aabf-d56b15b7716c@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17265_A53A516D7A8B644592D970450A35002127A87CA6@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17617_A53A516D7A8B644592D970450A35002174A60DBD@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+03023_1a34e46b-8003-4a1f-a25f-6e7f3b38fd8d@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+01445_813e1bb6-6bfa-470b-a05e-6b39644cf1a3@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+01318_d5195254-52cc-4080-9fdf-28dce6e8538a@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16402_a8e1aaa2-80e7-4937-8cde-d6e5dd8779d6@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+20550_5C041D9C6CCC7845AE90EEADDBDC8D016F030AE8@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+11748_05E01258E71AC046852ED29DFCD139D54DF0D9EC@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17296_A53A516D7A8B644592D970450A350021748EB73D@dncdag2.dnc.org.eml'NoneType' object has no attribute 'group'
+21987_2f39327d-ae50-4944-a323-bca59e1d7651@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21334_8A3BA5C3DED8F34DBD96D72CD1C4AA38A993AFC2@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20866_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9954CDC@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+19964_5C041D9C6CCC7845AE90EEADDBDC8D016F053E66@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21765_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995F565@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+10329_05E01258E71AC046852ED29DFCD139D54DF0C9DE@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+09994_05E01258E71AC046852ED29DFCD139D54DF26FDA@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18896_5C041D9C6CCC7845AE90EEADDBDC8D016EF896D8@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+22431_712855dd-6ff7-4b77-ba1b-f596059db210@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17183_A53A516D7A8B644592D970450A3500210639A2EF@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17405_A53A516D7A8B644592D970450A35002120D38053@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+02739_7f3b1828-4c3a-4a99-821f-0c01a98f2dec@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+11503_05E01258E71AC046852ED29DFCD139D54DF280F0@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01216_3a8312ee-8264-407d-a4e1-056294f62f74@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+10371_05E01258E71AC046852ED29DFCD139D54DEEED5F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+02695_a345688b-b315-4f39-b74b-b1dcd3062661@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+06922_05E01258E71AC046852ED29DFCD139D54DF0C965@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01554_35d6911d-4cf8-4297-a93d-0ee7e6e5315c@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+22033_67a5bed7-56f4-4f63-ade1-1f854546f5bc@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+09342_05E01258E71AC046852ED29DFCD139D54DF0C5E7@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+22020_c17fb6e0-5252-415c-b9bb-37a660b7b40f@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+13243_05E01258E71AC046852ED29DFCD139D54DF03561@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21635_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995F962@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+13618_05E01258E71AC046852ED29DFCD139D54DEF697A@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+10509_05E01258E71AC046852ED29DFCD139D54DF0554D@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+22099_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9960A7A@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+06041_05E01258E71AC046852ED29DFCD139D54DF0FED3@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+12846_05E01258E71AC046852ED29DFCD139D54DEEF142@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+22375_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9958752@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+22272_d43ce84e-212d-4545-a8fc-3d09ff75ec4c@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21803_404ae62e-b698-4622-a2c6-307a5988caee@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+08263_05E01258E71AC046852ED29DFCD139D54DF32319@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20719_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995D0A3@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21070_da38a04d-a9b4-46ad-8522-62e2887ad470@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+02211_6ace0c0e-7e33-4ce8-9e0d-8d0df06b688f@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21288_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9060473@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00928_86f8a0b9-efe9-40ae-9c16-bc81f68c8e2e@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21901_8A3BA5C3DED8F34DBD96D72CD1C4AA38A996B3B5@dncdag2.dnc.org.eml'NoneType' object has no attribute 'group'
+17089_A53A516D7A8B644592D970450A3500210637B43E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+19609_5C041D9C6CCC7845AE90EEADDBDC8D016F021F6F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16077_FA3F1BD25675E94DBCF666C39F02836CFE2BC968@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+02218_ac7b43e5-a920-4275-957f-174ba333ba97@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+06117_05E01258E71AC046852ED29DFCD139D54DF02296@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16460_93383d3c-1412-40e5-9761-0dcad163335c@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+10916_05E01258E71AC046852ED29DFCD139D54DEFC804@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20248_70f9e6ee-099d-473b-8de8-2e1d4eeead0e@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16220_FA3F1BD25675E94DBCF666C39F02836CFE2BCB3F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01910_6afcf0e7-7280-4e1e-b78e-21200b89f9f7@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+02264_4f5df7b9-b94d-4815-8489-fe5657539fc7@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+04538_05E01258E71AC046852ED29DFCD139D54DEF6975@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00765_cb130450-7e23-4b0e-80d5-26d384bb95af@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16551_bef8dc95-cc37-4a18-ab4f-39c72924759b@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+Process ForkPoolWorker-15:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/process.py", line 257, in _bootstrap
+    util._exit_function()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/util.py", line 313, in _exit_function
+    _run_finalizers()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/util.py", line 253, in _run_finalizers
+    finalizer()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/util.py", line 185, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/queues.py", line 198, in _finalize_join
+    thread.join()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/threading.py", line 1054, in join
+    self._wait_for_tstate_lock()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/threading.py", line 1070, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process ForkPoolWorker-17:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/process.py", line 257, in _bootstrap
+    util._exit_function()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/util.py", line 313, in _exit_function
+    _run_finalizers()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/util.py", line 253, in _run_finalizers
+    finalizer()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/util.py", line 185, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/queues.py", line 198, in _finalize_join
+    thread.join()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/threading.py", line 1054, in join
+    self._wait_for_tstate_lock()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/threading.py", line 1070, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process ForkPoolWorker-14:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/process.py", line 257, in _bootstrap
+    util._exit_function()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/util.py", line 313, in _exit_function
+    _run_finalizers()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/util.py", line 253, in _run_finalizers
+    finalizer()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/util.py", line 185, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/queues.py", line 198, in _finalize_join
+    thread.join()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/threading.py", line 1054, in join
+    self._wait_for_tstate_lock()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/threading.py", line 1070, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process ForkPoolWorker-18:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/process.py", line 257, in _bootstrap
+    util._exit_function()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/util.py", line 313, in _exit_function
+    _run_finalizers()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/util.py", line 253, in _run_finalizers
+    finalizer()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/util.py", line 185, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/queues.py", line 198, in _finalize_join
+    thread.join()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/threading.py", line 1054, in join
+    self._wait_for_tstate_lock()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/threading.py", line 1070, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Process ForkPoolWorker-16:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/process.py", line 257, in _bootstrap
+    util._exit_function()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/util.py", line 313, in _exit_function
+    _run_finalizers()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/util.py", line 253, in _run_finalizers
+    finalizer()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/util.py", line 185, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/queues.py", line 198, in _finalize_join
+    thread.join()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/threading.py", line 1054, in join
+    self._wait_for_tstate_lock()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/threading.py", line 1070, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "getFromToeml_multiPool.py", line 101, in <module>
+    test.process()
+  File "getFromToeml_multiPool.py", line 86, in process
+    p.join()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/pool.py", line 514, in join
+    p.join()
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/process.py", line 121, in join
+    res = self._popen.wait(timeout)
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/popen_fork.py", line 51, in wait
+    return self.poll(os.WNOHANG if timeout == 0.0 else 0)
+  File "/usr/local/Cellar/python3/3.5.1/Frameworks/Python.framework/Versions/3.5/lib/python3.5/multiprocessing/popen_fork.py", line 29, in poll
+    pid, sts = os.waitpid(self.pid, flag)
+KeyboardInterrupt
+11941_05E01258E71AC046852ED29DFCD139D54DF2C042@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18800_5C041D9C6CCC7845AE90EEADDBDC8D016F035078@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+10045_05E01258E71AC046852ED29DFCD139D54DEED6BB@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+08783_05E01258E71AC046852ED29DFCD139D54DF2E679@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16949_A53A516D7A8B644592D970450A35002174900412@dncdag2.dnc.org.eml'NoneType' object has no attribute 'group'
+22405_8A3BA5C3DED8F34DBD96D72CD1C4AA38A996B3B1@dncdag2.dnc.org.eml'NoneType' object has no attribute 'group'
+21531_8A3BA5C3DED8F34DBD96D72CD1C4AA38A996387E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00450_85d95825-218e-4144-a7d9-113914ea354a@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17431_A53A516D7A8B644592D970450A35002120D39864@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+10838_05E01258E71AC046852ED29DFCD139D54DEFFA21@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16811_FA3F1BD25675E94DBCF666C39F02836CFE2CDF57@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16311_c3a520d4-6f39-4ed4-87eb-09650ee9be89@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+02810_c50124b0-ad7c-4359-bac1-a9b87c6ec1b6@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+22254_8A3BA5C3DED8F34DBD96D72CD1C4AA38879B0DC0@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17181_A53A516D7A8B644592D970450A35002174A0E5CC@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01330_56957c0e-4fc3-4c24-ad53-c6a1180be202@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+10486_05E01258E71AC046852ED29DFCD139D54DF12E73@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20992_ec62e8c6-4f2c-48d9-9421-9b5d667c8f34@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+02652_4f9053da-7274-4eee-9a6c-2bd031348529@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17426_A53A516D7A8B644592D970450A35002174A63AC0@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+22177_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995F1A1@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+06394_05E01258E71AC046852ED29DFCD139D54DF23ED8@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17474_A53A516D7A8B644592D970450A350021063DCDAB@DNCDAG3.dnc.org.eml'NoneType' object has no attribute 'group'
+18986_5C041D9C6CCC7845AE90EEADDBDC8D016F04597F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17589_A53A516D7A8B644592D970450A35002127A7BA75@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00610_2689af28-24aa-4ab1-be5b-78b3e2268f47@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+22078_8A3BA5C3DED8F34DBD96D72CD1C4AA38A99605FB@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17337_00f5dd0c-2a10-494a-8066-1973f10be77e@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17268_A53A516D7A8B644592D970450A35002174A5CAD6@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17470_A53A516D7A8B644592D970450A35002127A301DF@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+04804_05E01258E71AC046852ED29DFCD139D54DF0CBA0@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+11807_e0604ab9-c9ba-4b66-b6cb-42af10fcd2ef@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+08561_05E01258E71AC046852ED29DFCD139D54DEF72FB@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21691_8A3BA5C3DED8F34DBD96D72CD1C4AA38879B0040@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+03024_be76a0dc-0dfd-4e78-b9ee-bd282d091811@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+11047_7b989523-a6b8-4eca-8958-90b1da399809@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21674_a9dc0240-8514-42f3-8b1d-6f5edde7602b@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17216_c6147aa4-e114-4e74-afee-5374709cbecb@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+08805_05E01258E71AC046852ED29DFCD139D54DF1345F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17142_A53A516D7A8B644592D970450A35002174A6B48A@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+09954_05E01258E71AC046852ED29DFCD139D54DF23335@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+07323_05E01258E71AC046852ED29DFCD139D54DF2D66E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01980_db7f282c-bc9b-4d8c-9a51-ace8a353a3c5@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+00969_8433d7b8-0e6d-472c-8fc2-d84703943b5d@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21402_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995809E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18808_5C041D9C6CCC7845AE90EEADDBDC8D016EF5B91F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16437_010a4689-77f4-4cd5-9a94-4ea63a646135@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16873_A53A516D7A8B644592D970450A35002120D397B0@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17224_A53A516D7A8B644592D970450A35002174A1AEE2@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+02065_05e56031-aa43-48c7-81b0-7fb163bbfb24@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+01243_9aa311c1-ce23-45f6-8289-5d2a21f2696c@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+20971_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995DC63@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+05188_05E01258E71AC046852ED29DFCD139D54DF13412@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+19737_ce1f56cc-0a72-445b-af12-8b550b4cf720@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21027_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995F150@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+04364_05E01258E71AC046852ED29DFCD139D54DEF3C35@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20836_60843498-7950-424b-bafa-bdfd11a26d88@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16881_A53A516D7A8B644592D970450A35002127A7B9BD@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17253_A53A516D7A8B644592D970450A35002127A87CA1@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+04725_05E01258E71AC046852ED29DFCD139D54DF1F2A7@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+09139_0765e015-9791-4322-b3c4-a13fbfbf81cb@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+04856_05E01258E71AC046852ED29DFCD139D54DF323FD@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21725_3040959a-2083-442b-850b-7c9b4a49a051@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+14147_05E01258E71AC046852ED29DFCD139D54DEF8908@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+19607_5C041D9C6CCC7845AE90EEADDBDC8D016EF3E07E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+05985_05E01258E71AC046852ED29DFCD139D54DF070F8@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+03748_050d368b-b77a-4b6e-bd15-b578893c9d12@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+03029_66419c85-45b7-479f-b445-866b7e3eaf41@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+03574_2a60df2b-823d-4025-aefa-9e3623727fca@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21535_b1f2cd8a-d5c3-4f04-83b2-cd1d74978a3b@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21563_5d00ccb0-dd92-477d-95bb-5baadbb0053e@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16823_FA3F1BD25675E94DBCF666C39F02836CFE2CE0E8@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21581_cafafecf-97da-486f-81a9-95fa1ff172cc@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+20625_5C041D9C6CCC7845AE90EEADDBDC8D016F039236@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21192_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995DAC1@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21547_8A3BA5C3DED8F34DBD96D72CD1C4AA38A99087BB@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18184_5C041D9C6CCC7845AE90EEADDBDC8D01220527E8@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20993_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995C17E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+03401_1132d9d5-1a15-43cc-ab68-b6d83e95cd18@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+19309_5C041D9C6CCC7845AE90EEADDBDC8D016F02EC94@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16171_0b71e0f4-60c0-405e-99e7-330dbfb3a1d9@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+18389_5C041D9C6CCC7845AE90EEADDBDC8D016EF7A97C@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01107_3c945078-0e94-4990-b4a7-fd57c376e54f@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21209_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9963137@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18257_47dd49be-986c-433f-a7ed-dbe5fdfaf372@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+02537_49392ebc-8884-4132-ad0e-95b28198695b@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+10824_05E01258E71AC046852ED29DFCD139D54DEEEA48@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17331_A53A516D7A8B644592D970450A350021063BEC7D@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16663_f82bbf48-eac6-4f4e-9852-8747c881efb1@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+19251_5C041D9C6CCC7845AE90EEADDBDC8D016EFD2D7E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21015_8A3BA5C3DED8F34DBD96D72CD1C4AA38879AC8D9@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+22347_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9919692@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01598_e5089bec-c91c-49ef-928b-d92316f41e2f@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17225_29500893-1f60-40c1-a108-7426cd009df6@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21300_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9060BDF@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00273_E93A195FF3E79F4784C9236DDD2BEC90295A139F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+12839_05E01258E71AC046852ED29DFCD139D54DEFA184@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18577_5C041D9C6CCC7845AE90EEADDBDC8D016F06731B@dncdag2.dnc.org.eml'NoneType' object has no attribute 'group'
+16497_faab76e0-9050-4c86-aabf-d56b15b7716c@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17265_A53A516D7A8B644592D970450A35002127A87CA6@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17617_A53A516D7A8B644592D970450A35002174A60DBD@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+03023_1a34e46b-8003-4a1f-a25f-6e7f3b38fd8d@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+01445_813e1bb6-6bfa-470b-a05e-6b39644cf1a3@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+01318_d5195254-52cc-4080-9fdf-28dce6e8538a@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16402_a8e1aaa2-80e7-4937-8cde-d6e5dd8779d6@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+20550_5C041D9C6CCC7845AE90EEADDBDC8D016F030AE8@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+11748_05E01258E71AC046852ED29DFCD139D54DF0D9EC@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17296_A53A516D7A8B644592D970450A350021748EB73D@dncdag2.dnc.org.eml'NoneType' object has no attribute 'group'
+21987_2f39327d-ae50-4944-a323-bca59e1d7651@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21334_8A3BA5C3DED8F34DBD96D72CD1C4AA38A993AFC2@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20866_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9954CDC@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+19964_5C041D9C6CCC7845AE90EEADDBDC8D016F053E66@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21765_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995F565@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+10329_05E01258E71AC046852ED29DFCD139D54DF0C9DE@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+09994_05E01258E71AC046852ED29DFCD139D54DF26FDA@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18896_5C041D9C6CCC7845AE90EEADDBDC8D016EF896D8@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17183_A53A516D7A8B644592D970450A3500210639A2EF@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+22431_712855dd-6ff7-4b77-ba1b-f596059db210@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17405_A53A516D7A8B644592D970450A35002120D38053@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+02739_7f3b1828-4c3a-4a99-821f-0c01a98f2dec@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+11503_05E01258E71AC046852ED29DFCD139D54DF280F0@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01216_3a8312ee-8264-407d-a4e1-056294f62f74@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+10371_05E01258E71AC046852ED29DFCD139D54DEEED5F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+02695_a345688b-b315-4f39-b74b-b1dcd3062661@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+06922_05E01258E71AC046852ED29DFCD139D54DF0C965@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01554_35d6911d-4cf8-4297-a93d-0ee7e6e5315c@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+22033_67a5bed7-56f4-4f63-ade1-1f854546f5bc@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+09342_05E01258E71AC046852ED29DFCD139D54DF0C5E7@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+22020_c17fb6e0-5252-415c-b9bb-37a660b7b40f@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+13243_05E01258E71AC046852ED29DFCD139D54DF03561@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21635_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995F962@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+13618_05E01258E71AC046852ED29DFCD139D54DEF697A@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+10509_05E01258E71AC046852ED29DFCD139D54DF0554D@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+22099_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9960A7A@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+06041_05E01258E71AC046852ED29DFCD139D54DF0FED3@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+12846_05E01258E71AC046852ED29DFCD139D54DEEF142@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+22375_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9958752@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+22272_d43ce84e-212d-4545-a8fc-3d09ff75ec4c@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21803_404ae62e-b698-4622-a2c6-307a5988caee@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+08263_05E01258E71AC046852ED29DFCD139D54DF32319@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20719_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995D0A3@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21070_da38a04d-a9b4-46ad-8522-62e2887ad470@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+02211_6ace0c0e-7e33-4ce8-9e0d-8d0df06b688f@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21288_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9060473@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00928_86f8a0b9-efe9-40ae-9c16-bc81f68c8e2e@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21901_8A3BA5C3DED8F34DBD96D72CD1C4AA38A996B3B5@dncdag2.dnc.org.eml'NoneType' object has no attribute 'group'
+17089_A53A516D7A8B644592D970450A3500210637B43E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+19609_5C041D9C6CCC7845AE90EEADDBDC8D016F021F6F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16077_FA3F1BD25675E94DBCF666C39F02836CFE2BC968@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+02218_ac7b43e5-a920-4275-957f-174ba333ba97@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+06117_05E01258E71AC046852ED29DFCD139D54DF02296@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16460_93383d3c-1412-40e5-9761-0dcad163335c@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+10916_05E01258E71AC046852ED29DFCD139D54DEFC804@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20248_70f9e6ee-099d-473b-8de8-2e1d4eeead0e@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16220_FA3F1BD25675E94DBCF666C39F02836CFE2BCB3F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01910_6afcf0e7-7280-4e1e-b78e-21200b89f9f7@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+02264_4f5df7b9-b94d-4815-8489-fe5657539fc7@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+04538_05E01258E71AC046852ED29DFCD139D54DEF6975@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00765_cb130450-7e23-4b0e-80d5-26d384bb95af@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16551_bef8dc95-cc37-4a18-ab4f-39c72924759b@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+12178_05E01258E71AC046852ED29DFCD139D54DEFC221@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00336_549f7e0e-9d02-41b5-bef3-e6b94548970a@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21172_6edf470b-1f74-436c-8023-c6ea3196e6b1@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+19708_5C041D9C6CCC7845AE90EEADDBDC8D016EF71179@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20853_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995F130@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20757_8A3BA5C3DED8F34DBD96D72CD1C4AA38A994EFEF@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17199_3b0ee5f5-5c84-4037-9123-e431ca6d201e@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+20759_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9957D5B@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17499_A53A516D7A8B644592D970450A350021063810BF@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+19852_5C041D9C6CCC7845AE90EEADDBDC8D016F03B642@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18348_e3ed8dab-1bec-4774-8038-d2e297d4d017@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+08728_05E01258E71AC046852ED29DFCD139D54DEECD7C@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+09741_05E01258E71AC046852ED29DFCD139D54DF24C16@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+02713_f5ce33de-d434-46ab-befe-a7ee1fa11548@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+01479_141545a7-f44c-4bfd-97c8-c08643a44bce@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16116_8fe27c38-8984-4b37-9dc0-ec1d5e138af4@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+12399_05E01258E71AC046852ED29DFCD139D54DF24DED@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+08293_05E01258E71AC046852ED29DFCD139D54DF2D887@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00993_d6921aa4-a6f3-4080-b076-bb9fe6c8197f@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+08519_05E01258E71AC046852ED29DFCD139D54DEFF6FA@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+07348_05E01258E71AC046852ED29DFCD139D54DF32705@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21646_e1e8dfb1-7345-41c0-8fa4-e4a5181488d4@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21143_8A3BA5C3DED8F34DBD96D72CD1C4AA38A906D06C@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+02998_310e9f72-48f4-4cce-ab2c-c8b65ad3be70@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+14195_05E01258E71AC046852ED29DFCD139D54DF10054@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21964_182e9e9f-5e0f-475f-afc9-683998d59f79@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+09974_05E01258E71AC046852ED29DFCD139D54DF2C43E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+19362_5C041D9C6CCC7845AE90EEADDBDC8D016EF4D830@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01807_dc1a2925-516a-4ebf-9dc8-0425b4a527ff@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+18290_5C041D9C6CCC7845AE90EEADDBDC8D011B31E9D0@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+11096_05E01258E71AC046852ED29DFCD139D54DF10044@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17544_A53A516D7A8B644592D970450A35002174A5F915@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+02856_ea8c1b54-9ee7-4917-976e-d4ddef78d5e6@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+02042_E93A195FF3E79F4784C9236DDD2BEC90288B882F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18739_5C041D9C6CCC7845AE90EEADDBDC8D016F0345EF@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21205_d995a3d2-e3de-456e-bc35-07fde0a834de@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16762_d6d549de-44f5-4864-bcb6-609dc8029b3f@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17176_A53A516D7A8B644592D970450A350021063F9750@DNCDAG3.dnc.org.eml'NoneType' object has no attribute 'group'
+02803_6209bbd6-6d03-41d1-bec4-a3edcf4f161e@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+12394_05E01258E71AC046852ED29DFCD139D54DF12DDE@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21309_b9aa87fa-01e9-4fc7-b00e-389163db45f8@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+18792_5C041D9C6CCC7845AE90EEADDBDC8D016F030122@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01341_79ee0ccf-1bff-4c61-92ee-9d0a29d5d5ec@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+00721_6369d41f-4e32-490e-8541-5286dc8284fe@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+02052_0ba1a07f-e362-4419-a791-6c16628d032b@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16014_c72f1825-533e-4ad5-bb03-a564f5eb1bc3@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+08876_05E01258E71AC046852ED29DFCD139D54DF062F3@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+02853_dd02804e-2259-494a-8bf5-71d4656d5aec@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+18020_1fb22330-21cc-4c68-aab6-d02c8f00cf0e@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+01089_bf73094d-7595-4f3a-9ee8-2e7487c974cb@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16884_A53A516D7A8B644592D970450A35002127A5728D@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+08791_05E01258E71AC046852ED29DFCD139D54DF25061@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21708_f8d1ff2f-9d64-4ca9-ab4d-0d4a09d1b1a6@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+04275_05E01258E71AC046852ED29DFCD139D54DF13284@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21583_8A3BA5C3DED8F34DBD96D72CD1C4AA38879CCCAB@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01095_f4ddd731-d842-4696-83dd-b750221723b1@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+07953_05E01258E71AC046852ED29DFCD139D54DF03442@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00799_cd95d8c4-69e7-4a3e-a67f-51f39abada38@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17772_5C041D9C6CCC7845AE90EEADDBDC8D016EF4932D@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+03218_9aa67b6a-3025-4b32-b4ef-12cf4b5c87e9@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+22115_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9957C21@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17069_A53A516D7A8B644592D970450A3500210639B011@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16962_02d16fa8-566b-416c-8c46-46badf62cdf9@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21461_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9957DFA@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+07385_05E01258E71AC046852ED29DFCD139D54DF05EC2@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17471_A53A516D7A8B644592D970450A35002174914361@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16801_1d89dacd-e3af-42e9-b24c-39f87256ae59@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+09061_05E01258E71AC046852ED29DFCD139D54DEF88C4@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01322_bebff8cc-3fe6-477b-9608-f5973906cb05@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+08789_05E01258E71AC046852ED29DFCD139D54DEFFD85@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+11941_05E01258E71AC046852ED29DFCD139D54DF2C042@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18800_5C041D9C6CCC7845AE90EEADDBDC8D016F035078@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+10045_05E01258E71AC046852ED29DFCD139D54DEED6BB@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+08783_05E01258E71AC046852ED29DFCD139D54DF2E679@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16949_A53A516D7A8B644592D970450A35002174900412@dncdag2.dnc.org.eml'NoneType' object has no attribute 'group'
+22405_8A3BA5C3DED8F34DBD96D72CD1C4AA38A996B3B1@dncdag2.dnc.org.eml'NoneType' object has no attribute 'group'
+21531_8A3BA5C3DED8F34DBD96D72CD1C4AA38A996387E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00450_85d95825-218e-4144-a7d9-113914ea354a@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17431_A53A516D7A8B644592D970450A35002120D39864@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+10838_05E01258E71AC046852ED29DFCD139D54DEFFA21@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16811_FA3F1BD25675E94DBCF666C39F02836CFE2CDF57@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16311_c3a520d4-6f39-4ed4-87eb-09650ee9be89@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+02810_c50124b0-ad7c-4359-bac1-a9b87c6ec1b6@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+22254_8A3BA5C3DED8F34DBD96D72CD1C4AA38879B0DC0@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17181_A53A516D7A8B644592D970450A35002174A0E5CC@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01330_56957c0e-4fc3-4c24-ad53-c6a1180be202@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+10486_05E01258E71AC046852ED29DFCD139D54DF12E73@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20992_ec62e8c6-4f2c-48d9-9421-9b5d667c8f34@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+02652_4f9053da-7274-4eee-9a6c-2bd031348529@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17426_A53A516D7A8B644592D970450A35002174A63AC0@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+22177_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995F1A1@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+06394_05E01258E71AC046852ED29DFCD139D54DF23ED8@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17474_A53A516D7A8B644592D970450A350021063DCDAB@DNCDAG3.dnc.org.eml'NoneType' object has no attribute 'group'
+18986_5C041D9C6CCC7845AE90EEADDBDC8D016F04597F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17589_A53A516D7A8B644592D970450A35002127A7BA75@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00610_2689af28-24aa-4ab1-be5b-78b3e2268f47@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+22078_8A3BA5C3DED8F34DBD96D72CD1C4AA38A99605FB@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17337_00f5dd0c-2a10-494a-8066-1973f10be77e@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17268_A53A516D7A8B644592D970450A35002174A5CAD6@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17470_A53A516D7A8B644592D970450A35002127A301DF@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+04804_05E01258E71AC046852ED29DFCD139D54DF0CBA0@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+11807_e0604ab9-c9ba-4b66-b6cb-42af10fcd2ef@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+08561_05E01258E71AC046852ED29DFCD139D54DEF72FB@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21691_8A3BA5C3DED8F34DBD96D72CD1C4AA38879B0040@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+03024_be76a0dc-0dfd-4e78-b9ee-bd282d091811@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+11047_7b989523-a6b8-4eca-8958-90b1da399809@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21674_a9dc0240-8514-42f3-8b1d-6f5edde7602b@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17216_c6147aa4-e114-4e74-afee-5374709cbecb@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+08805_05E01258E71AC046852ED29DFCD139D54DF1345F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17142_A53A516D7A8B644592D970450A35002174A6B48A@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+09954_05E01258E71AC046852ED29DFCD139D54DF23335@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+07323_05E01258E71AC046852ED29DFCD139D54DF2D66E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01980_db7f282c-bc9b-4d8c-9a51-ace8a353a3c5@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+00969_8433d7b8-0e6d-472c-8fc2-d84703943b5d@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21402_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995809E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18808_5C041D9C6CCC7845AE90EEADDBDC8D016EF5B91F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16437_010a4689-77f4-4cd5-9a94-4ea63a646135@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16873_A53A516D7A8B644592D970450A35002120D397B0@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17224_A53A516D7A8B644592D970450A35002174A1AEE2@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+02065_05e56031-aa43-48c7-81b0-7fb163bbfb24@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+01243_9aa311c1-ce23-45f6-8289-5d2a21f2696c@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+20971_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995DC63@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+19737_ce1f56cc-0a72-445b-af12-8b550b4cf720@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+05188_05E01258E71AC046852ED29DFCD139D54DF13412@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21027_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995F150@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+04364_05E01258E71AC046852ED29DFCD139D54DEF3C35@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20836_60843498-7950-424b-bafa-bdfd11a26d88@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16881_A53A516D7A8B644592D970450A35002127A7B9BD@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17253_A53A516D7A8B644592D970450A35002127A87CA1@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+04725_05E01258E71AC046852ED29DFCD139D54DF1F2A7@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+09139_0765e015-9791-4322-b3c4-a13fbfbf81cb@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+04856_05E01258E71AC046852ED29DFCD139D54DF323FD@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+14147_05E01258E71AC046852ED29DFCD139D54DEF8908@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21725_3040959a-2083-442b-850b-7c9b4a49a051@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+19607_5C041D9C6CCC7845AE90EEADDBDC8D016EF3E07E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+05985_05E01258E71AC046852ED29DFCD139D54DF070F8@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+03748_050d368b-b77a-4b6e-bd15-b578893c9d12@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+03029_66419c85-45b7-479f-b445-866b7e3eaf41@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+03574_2a60df2b-823d-4025-aefa-9e3623727fca@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21535_b1f2cd8a-d5c3-4f04-83b2-cd1d74978a3b@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21563_5d00ccb0-dd92-477d-95bb-5baadbb0053e@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16823_FA3F1BD25675E94DBCF666C39F02836CFE2CE0E8@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21581_cafafecf-97da-486f-81a9-95fa1ff172cc@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+20625_5C041D9C6CCC7845AE90EEADDBDC8D016F039236@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21192_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995DAC1@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21547_8A3BA5C3DED8F34DBD96D72CD1C4AA38A99087BB@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18184_5C041D9C6CCC7845AE90EEADDBDC8D01220527E8@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20993_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995C17E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+03401_1132d9d5-1a15-43cc-ab68-b6d83e95cd18@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+19309_5C041D9C6CCC7845AE90EEADDBDC8D016F02EC94@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16171_0b71e0f4-60c0-405e-99e7-330dbfb3a1d9@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+18389_5C041D9C6CCC7845AE90EEADDBDC8D016EF7A97C@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01107_3c945078-0e94-4990-b4a7-fd57c376e54f@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21209_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9963137@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18257_47dd49be-986c-433f-a7ed-dbe5fdfaf372@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+02537_49392ebc-8884-4132-ad0e-95b28198695b@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+10824_05E01258E71AC046852ED29DFCD139D54DEEEA48@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17331_A53A516D7A8B644592D970450A350021063BEC7D@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16663_f82bbf48-eac6-4f4e-9852-8747c881efb1@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+19251_5C041D9C6CCC7845AE90EEADDBDC8D016EFD2D7E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21015_8A3BA5C3DED8F34DBD96D72CD1C4AA38879AC8D9@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+22347_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9919692@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01598_e5089bec-c91c-49ef-928b-d92316f41e2f@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17225_29500893-1f60-40c1-a108-7426cd009df6@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21300_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9060BDF@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00273_E93A195FF3E79F4784C9236DDD2BEC90295A139F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+12839_05E01258E71AC046852ED29DFCD139D54DEFA184@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18577_5C041D9C6CCC7845AE90EEADDBDC8D016F06731B@dncdag2.dnc.org.eml'NoneType' object has no attribute 'group'
+16497_faab76e0-9050-4c86-aabf-d56b15b7716c@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17265_A53A516D7A8B644592D970450A35002127A87CA6@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17617_A53A516D7A8B644592D970450A35002174A60DBD@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+03023_1a34e46b-8003-4a1f-a25f-6e7f3b38fd8d@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+01445_813e1bb6-6bfa-470b-a05e-6b39644cf1a3@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+01318_d5195254-52cc-4080-9fdf-28dce6e8538a@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16402_a8e1aaa2-80e7-4937-8cde-d6e5dd8779d6@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+20550_5C041D9C6CCC7845AE90EEADDBDC8D016F030AE8@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+11748_05E01258E71AC046852ED29DFCD139D54DF0D9EC@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17296_A53A516D7A8B644592D970450A350021748EB73D@dncdag2.dnc.org.eml'NoneType' object has no attribute 'group'
+21987_2f39327d-ae50-4944-a323-bca59e1d7651@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21334_8A3BA5C3DED8F34DBD96D72CD1C4AA38A993AFC2@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20866_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9954CDC@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+19964_5C041D9C6CCC7845AE90EEADDBDC8D016F053E66@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21765_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995F565@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+10329_05E01258E71AC046852ED29DFCD139D54DF0C9DE@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+09994_05E01258E71AC046852ED29DFCD139D54DF26FDA@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18896_5C041D9C6CCC7845AE90EEADDBDC8D016EF896D8@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+22431_712855dd-6ff7-4b77-ba1b-f596059db210@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17183_A53A516D7A8B644592D970450A3500210639A2EF@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17405_A53A516D7A8B644592D970450A35002120D38053@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+02739_7f3b1828-4c3a-4a99-821f-0c01a98f2dec@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+11503_05E01258E71AC046852ED29DFCD139D54DF280F0@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01216_3a8312ee-8264-407d-a4e1-056294f62f74@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+10371_05E01258E71AC046852ED29DFCD139D54DEEED5F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+02695_a345688b-b315-4f39-b74b-b1dcd3062661@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+06922_05E01258E71AC046852ED29DFCD139D54DF0C965@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01554_35d6911d-4cf8-4297-a93d-0ee7e6e5315c@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+22033_67a5bed7-56f4-4f63-ade1-1f854546f5bc@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+09342_05E01258E71AC046852ED29DFCD139D54DF0C5E7@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+22020_c17fb6e0-5252-415c-b9bb-37a660b7b40f@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+13243_05E01258E71AC046852ED29DFCD139D54DF03561@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21635_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995F962@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+13618_05E01258E71AC046852ED29DFCD139D54DEF697A@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+10509_05E01258E71AC046852ED29DFCD139D54DF0554D@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+22099_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9960A7A@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+06041_05E01258E71AC046852ED29DFCD139D54DF0FED3@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+12846_05E01258E71AC046852ED29DFCD139D54DEEF142@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+22375_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9958752@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+22272_d43ce84e-212d-4545-a8fc-3d09ff75ec4c@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21803_404ae62e-b698-4622-a2c6-307a5988caee@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+08263_05E01258E71AC046852ED29DFCD139D54DF32319@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20719_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995D0A3@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21070_da38a04d-a9b4-46ad-8522-62e2887ad470@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+02211_6ace0c0e-7e33-4ce8-9e0d-8d0df06b688f@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21288_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9060473@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00928_86f8a0b9-efe9-40ae-9c16-bc81f68c8e2e@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21901_8A3BA5C3DED8F34DBD96D72CD1C4AA38A996B3B5@dncdag2.dnc.org.eml'NoneType' object has no attribute 'group'
+17089_A53A516D7A8B644592D970450A3500210637B43E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+19609_5C041D9C6CCC7845AE90EEADDBDC8D016F021F6F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16077_FA3F1BD25675E94DBCF666C39F02836CFE2BC968@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+02218_ac7b43e5-a920-4275-957f-174ba333ba97@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+06117_05E01258E71AC046852ED29DFCD139D54DF02296@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16460_93383d3c-1412-40e5-9761-0dcad163335c@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+10916_05E01258E71AC046852ED29DFCD139D54DEFC804@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20248_70f9e6ee-099d-473b-8de8-2e1d4eeead0e@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16220_FA3F1BD25675E94DBCF666C39F02836CFE2BCB3F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01910_6afcf0e7-7280-4e1e-b78e-21200b89f9f7@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+02264_4f5df7b9-b94d-4815-8489-fe5657539fc7@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+04538_05E01258E71AC046852ED29DFCD139D54DEF6975@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00765_cb130450-7e23-4b0e-80d5-26d384bb95af@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16551_bef8dc95-cc37-4a18-ab4f-39c72924759b@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+12178_05E01258E71AC046852ED29DFCD139D54DEFC221@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00336_549f7e0e-9d02-41b5-bef3-e6b94548970a@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21172_6edf470b-1f74-436c-8023-c6ea3196e6b1@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+19708_5C041D9C6CCC7845AE90EEADDBDC8D016EF71179@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20853_8A3BA5C3DED8F34DBD96D72CD1C4AA38A995F130@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+20757_8A3BA5C3DED8F34DBD96D72CD1C4AA38A994EFEF@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17199_3b0ee5f5-5c84-4037-9123-e431ca6d201e@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+20759_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9957D5B@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17499_A53A516D7A8B644592D970450A350021063810BF@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+19852_5C041D9C6CCC7845AE90EEADDBDC8D016F03B642@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18348_e3ed8dab-1bec-4774-8038-d2e297d4d017@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+08728_05E01258E71AC046852ED29DFCD139D54DEECD7C@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+09741_05E01258E71AC046852ED29DFCD139D54DF24C16@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+02713_f5ce33de-d434-46ab-befe-a7ee1fa11548@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+01479_141545a7-f44c-4bfd-97c8-c08643a44bce@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16116_8fe27c38-8984-4b37-9dc0-ec1d5e138af4@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+12399_05E01258E71AC046852ED29DFCD139D54DF24DED@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+08293_05E01258E71AC046852ED29DFCD139D54DF2D887@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00993_d6921aa4-a6f3-4080-b076-bb9fe6c8197f@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+08519_05E01258E71AC046852ED29DFCD139D54DEFF6FA@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+07348_05E01258E71AC046852ED29DFCD139D54DF32705@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21646_e1e8dfb1-7345-41c0-8fa4-e4a5181488d4@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21143_8A3BA5C3DED8F34DBD96D72CD1C4AA38A906D06C@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+02998_310e9f72-48f4-4cce-ab2c-c8b65ad3be70@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+14195_05E01258E71AC046852ED29DFCD139D54DF10054@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21964_182e9e9f-5e0f-475f-afc9-683998d59f79@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+09974_05E01258E71AC046852ED29DFCD139D54DF2C43E@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+19362_5C041D9C6CCC7845AE90EEADDBDC8D016EF4D830@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01807_dc1a2925-516a-4ebf-9dc8-0425b4a527ff@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+18290_5C041D9C6CCC7845AE90EEADDBDC8D011B31E9D0@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+11096_05E01258E71AC046852ED29DFCD139D54DF10044@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17544_A53A516D7A8B644592D970450A35002174A5F915@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+02856_ea8c1b54-9ee7-4917-976e-d4ddef78d5e6@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+02042_E93A195FF3E79F4784C9236DDD2BEC90288B882F@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+18739_5C041D9C6CCC7845AE90EEADDBDC8D016F0345EF@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21205_d995a3d2-e3de-456e-bc35-07fde0a834de@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16762_d6d549de-44f5-4864-bcb6-609dc8029b3f@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17176_A53A516D7A8B644592D970450A350021063F9750@DNCDAG3.dnc.org.eml'NoneType' object has no attribute 'group'
+02803_6209bbd6-6d03-41d1-bec4-a3edcf4f161e@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+12394_05E01258E71AC046852ED29DFCD139D54DF12DDE@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21309_b9aa87fa-01e9-4fc7-b00e-389163db45f8@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+01341_79ee0ccf-1bff-4c61-92ee-9d0a29d5d5ec@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+18792_5C041D9C6CCC7845AE90EEADDBDC8D016F030122@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00721_6369d41f-4e32-490e-8541-5286dc8284fe@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+02052_0ba1a07f-e362-4419-a791-6c16628d032b@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16014_c72f1825-533e-4ad5-bb03-a564f5eb1bc3@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+08876_05E01258E71AC046852ED29DFCD139D54DF062F3@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+02853_dd02804e-2259-494a-8bf5-71d4656d5aec@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+18020_1fb22330-21cc-4c68-aab6-d02c8f00cf0e@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+01089_bf73094d-7595-4f3a-9ee8-2e7487c974cb@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+16884_A53A516D7A8B644592D970450A35002127A5728D@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+08791_05E01258E71AC046852ED29DFCD139D54DF25061@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21708_f8d1ff2f-9d64-4ca9-ab4d-0d4a09d1b1a6@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+04275_05E01258E71AC046852ED29DFCD139D54DF13284@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+21583_8A3BA5C3DED8F34DBD96D72CD1C4AA38879CCCAB@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01095_f4ddd731-d842-4696-83dd-b750221723b1@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+07953_05E01258E71AC046852ED29DFCD139D54DF03442@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+00799_cd95d8c4-69e7-4a3e-a67f-51f39abada38@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+17772_5C041D9C6CCC7845AE90EEADDBDC8D016EF4932D@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+03218_9aa67b6a-3025-4b32-b4ef-12cf4b5c87e9@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+22115_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9957C21@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17069_A53A516D7A8B644592D970450A3500210639B011@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16962_02d16fa8-566b-416c-8c46-46badf62cdf9@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+21461_8A3BA5C3DED8F34DBD96D72CD1C4AA38A9957DFA@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+07385_05E01258E71AC046852ED29DFCD139D54DF05EC2@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+17471_A53A516D7A8B644592D970450A35002174914361@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+16801_1d89dacd-e3af-42e9-b24c-39f87256ae59@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+09061_05E01258E71AC046852ED29DFCD139D54DEF88C4@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
+01322_bebff8cc-3fe6-477b-9608-f5973906cb05@dncum1.dnc.org.eml'NoneType' object has no attribute 'group'
+08789_05E01258E71AC046852ED29DFCD139D54DEFFD85@dncdag1.dnc.org.eml'NoneType' object has no attribute 'group'
