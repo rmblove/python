@@ -44,12 +44,12 @@ def hash4(str):
     return int(result.hexdigest(), 16) % size
     pass
 
-class Filter:
+class BloomFilter:
     def __init__(self, s = 100000000):
         self.size = s
         self.bloom_map = [0] * size
     def is_in(self, str):
-#        global self.bloom_map
+
         h1 = hash1(str)
         h2 = hash2(str)
         h3 = hash3(str)

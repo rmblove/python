@@ -4,41 +4,9 @@
 import re
 import pymysql
 from lxml import etree
-from urlopener import urlprocess
 
-def findName(nodes):
-    find = etree.XPath("//span[@property='v:itemreviewed']")
-    name = find(nodes)
-    return name[0].text
 
-def findScore(nodes):
-    find = etree.XPath("//strong[@class='ll rating_num']")
-    score = find(nodes)
-    return score[0].text
-
-def findEvaluNum(nodes):
-    find = etree.XPath("//span[@property='v:votes']")
-    EvaluNum = find(nodes)
-    return EvaluNum[0].text
-
-def findinfo(url):
-    html = urlprocess(url)
-    nodes = etree.HTML(html)
-    try:
-        name = findName(nodes)
-    except Exception as e:
-        name = 'Null'
-    try:
-        score = float(findScore(nodes))
-    except Exception as e:
-        score = 'Null'
-    try:
-        evalunum = findEvaluNum(nodes)
-    except Exception as e:
-        evalunum = 'Null'
-    return[url, name, score, evalunum]
-
-def saveinsql(list):
+def save2mysql(list):
     try:
         conn = pymysql.connect(host='localhost', user='python', password='123456', db='bttiantang.com', charset='utf8mb4')
         with conn.cursor() as cur:
@@ -52,11 +20,12 @@ def saveinsql(list):
     finally:
         conn.close()
 
-def Download(url):
-    list = findinfo(url)
-    if list[1] == 'Null':
-        return
-    print(list)
-#saveinsql(list)
-    print('saving complete')
+def save2sqlite(list)
+    pass
 
+
+def callback1(html, args):
+    pass
+
+def callback2(html, args):
+    pass
