@@ -42,7 +42,7 @@ def randheader():
         'Accept': head_accept[0],
         'Accept-Charset': 'utf-8;q=0.7,*;q=0.3',
         'Accept-Language':head_accept_language[1],
-        'Referer':'https://www.hao123.com',   # When you first use __this__.py change it.
+        'Referer':'https://www.douban.com',   # When you first use __this__.py change it.
         'Accept-Encoding':'gzip',
         'Accept-Language':'zh-CN,zh;q=0.8,ja;q=0.6',
         'User-Agent':head_user_agent[random.randrange(0,len(head_user_agent))]
@@ -54,8 +54,11 @@ def randheader():
 # proxy ip: http://www.cybersyndrome.net/pla.html 
 # To get a random proxy to conform request.ProxyHandler(randproxies())
 def randproxies():
-    ip = ['128.199.119.206:3128',
-          '128.199.150.111:3128'
+    ip = ['202.153.130.214:80',
+          '2.48.3.237:8080',
+          '124.255.23.82:80',
+          '1.235.185.57:80',
+          '123.125.122.204:80'
     ]
     proxy = {'http':ip[random.randrange(0,len(ip))]}
     return proxy
@@ -75,7 +78,8 @@ def readweb(f, info):
 
 
 # Find and return all urls in html where <a href = "www.google.com" \a>
-def findurls(html, contain = None):
+def findurls(html, domain = None, cleaner = None ):
+    global filter
     urls = []
     tree = None
     parser = etree.HTMLParser()
@@ -84,16 +88,23 @@ def findurls(html, contain = None):
     elif isinstance(html, bytes):
         tree = etree.parse(BytesIO(html), parser)
     else:
-        return None
+        return []
     for element in tree.findall(".//a[@href]"):
         url = element.get('href')
-        if contain == None:
+        if domain != None and not url.startswith("http"):
+            url = domain+url
             urls.append(url)
-        elif (url.find(contain)) != -1:
+        if domain == None and cleaner == None:
+            urls.append(url)
+        elif (url.find(domain)) != -1:
+            if cleaner != None:
+                url = cleaner(url)
+                if filter.checkin(url):
+                    continue
             urls.append(url)
         else: 
             continue
-    pprint.pprint(urls)           #test
+    #pprint.pprint(urls)           #test
     return urls
 
 
@@ -103,12 +114,30 @@ def urlseen(func):
     global filter
     @wraps(func)
     def warp(*args):
-        if not filter.is_in(args[1]):
+        if not filter.checkin(args[1]):               #args[0] is self args[1] is url
             return func(args[0], args[1])
         else:
             return None
     return warp
 
+def urlcheck(func):
+    global filter
+    @wraps(func)
+    def warp(*args):
+        if not filter.check(args[1]):               #args[0] is self args[1] is url
+            return func(args[0], args[1])
+        else:
+            return None
+    return warp
+
+def memo(func):
+    cache = {}
+    @wraps(func)
+    def warp(*args):
+        if args not in cache:
+            cache[args] = fun(*args)
+        return cache[args]
+    return warp
 
 class CrawlerOpener:
     # A opener with a proxy_handler and a cookie_handler
@@ -131,7 +160,6 @@ class CrawlerRequest(CrawlerOpener):
     def __init__(self):
         super().__init__()
         self.header = randheader()
-        self.filter = BloomFilter()
         self.err_count = 0
 
     def open_url(self, url):
@@ -150,6 +178,10 @@ class CrawlerRequest(CrawlerOpener):
     
     #callbacks should be (func, *args)
     def open_url_with_callback(self, url, *callbacks):
+        if(self.err_count > 10):              # if err is bigger than 10 , reinitialize Crawler
+            super().__init__()
+            self.header = randheader()
+            self.err_count = 0
         try:
             html = self.open_url_with_filter(url)
             for func, *args in callbacks:
@@ -162,60 +194,17 @@ class CrawlerRequest(CrawlerOpener):
     
     def get_urls(self, url):
         return findurls(self.open_url(url))
-
-def callback1(html, a):
-    urls = findurls(html, a)
-
-cb = (callback1, "baidu.com")
-
-if __name__ == "__main__":
-    cr = CrawlerRequest()
-    print("---- Test clopener ----\n")
-    html = cr.open_url_with_callback("https://www.hao123.com", cb)
-    #print(html)
-
-
+ 
+# def callback1(html, a):
+#     urls = findurls(html, a)
+# 
+# cb = (callback1, "baidu.com")
+# 
+# if __name__ == "__main__":
+#     cr = CrawlerRequest()
+#     print("---- Test clopener ----\n")
+#     html = cr.open_url_with_callback("https://www.hao123.com", cb)
+#     #print(html)
 
 
 
-
-
-
-#Blow are deprecated functions
-'''
-def urlprocess(url):    
-    proxy_support = request.ProxyHandler(randproxies())
-    opener = request.build_opener(proxy_support)
-    request.install_opener(opener)
-    req = request.Request(url, headers = randheader())
-    html = request.urlopen(req)
-    try:
-        html = gzip.decompress(html.read())
-    except Exception as e:
-        html = html.read()
-    try:
-        html = html.decode('utf-8')
-    except Exception as e:
-        html = html.decode('gbk')
-    finally:
-        return html
-
-def nodeprocess(html):
-    url_list = []
-    try:
-        html = etree.HTML(html)
-    except Exception as e:
-        print(e)
-        return url_list 
-    find = etree.XPath("//a[@href]")
-    nodes = find(html)
-    for node in nodes:
-        url = node.attrib['href']
-        if re.match('http://movie', url):#域过滤
-            url_list.append(url)
-    return url_list
-
-def get_urls(url):
-    url_list = nodeprocess(urlprocess(url))
-    return url_list
-'''

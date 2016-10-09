@@ -48,8 +48,8 @@ class BloomFilter:
     def __init__(self, s = 100000000):
         self.size = s
         self.bloom_map = [0] * size
-    def is_in(self, str):
-
+    
+    def checkin(self, str):
         h1 = hash1(str)
         h2 = hash2(str)
         h3 = hash3(str)
@@ -62,6 +62,17 @@ class BloomFilter:
             return(False)
         else:
             return(True)
+    
+    def check(self, str): 
+        h1 = hash1(str)
+        h2 = hash2(str)
+        h3 = hash3(str)
+        h4 = hash4(str)    
+        if self.bloom_map[h1] * self.bloom_map[h2] * self.bloom_map[h3] * self.bloom_map[h4] == 0:
+            return(False)
+        else:
+            return(True)
+        
     def clear(self):
         self.bloom_map = '0' * self.size
 
