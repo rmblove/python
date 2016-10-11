@@ -49,6 +49,7 @@ class BloomFilter:
         self.size = s
         self.bloom_map = [0] * size
     
+    #check with change to bloom_map
     def checkin(self, str):
         h1 = hash1(str)
         h2 = hash2(str)
@@ -63,6 +64,7 @@ class BloomFilter:
         else:
             return(True)
     
+    #check without change to bloom_map
     def check(self, str): 
         h1 = hash1(str)
         h2 = hash2(str)

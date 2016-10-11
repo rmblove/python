@@ -10,6 +10,7 @@ from bloomfilter import BloomFilter
 from lxml import etree
 import pprint
 import gzip
+import sys
 import random
 import re
 
@@ -78,7 +79,7 @@ def readweb(f, info):
 
 
 # Find and return all urls in html where <a href = "www.google.com" \a>
-def findurls(html, domain = None, cleaner = None ):
+def findurls(html, domain = None, cleaner = None):
     global filter
     urls = []
     tree = None
@@ -91,15 +92,15 @@ def findurls(html, domain = None, cleaner = None ):
         return []
     for element in tree.findall(".//a[@href]"):
         url = element.get('href')
-        if domain != None and not url.startswith("http"):
+        if domain != None and url.startswith("/"):
             url = domain+url
-            urls.append(url)
         if domain == None and cleaner == None:
             urls.append(url)
+            continue
         elif (url.find(domain)) != -1:
             if cleaner != None:
                 url = cleaner(url)
-                if filter.checkin(url):
+                if filter.check(url):
                     continue
             urls.append(url)
         else: 
@@ -115,6 +116,8 @@ def urlseen(func):
     @wraps(func)
     def warp(*args):
         if not filter.checkin(args[1]):               #args[0] is self args[1] is url
+            #print("args[1]")
+            #print(args[1])
             return func(args[0], args[1])
         else:
             return None
@@ -174,7 +177,8 @@ class CrawlerRequest(CrawlerOpener):
         try:
             return self.open_url(url)
         except Exception as e:
-            print(e)
+            print("Error : open_url_with_filter()", file=sys.stderr)
+            print(e, file=sys.stderr)
     
     #callbacks should be (func, *args)
     def open_url_with_callback(self, url, *callbacks):
@@ -189,7 +193,8 @@ class CrawlerRequest(CrawlerOpener):
             return html
         except Exception as e:
             self.err_count += 1
-            print(e)
+            print("Error : open_url_with_callback()", file=sys.stderr)
+            print(e, file=sys.stderr)
     
     
     def get_urls(self, url):
